@@ -1,0 +1,63 @@
+<!doctype html>
+<html lang="ja">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="color-scheme" content="dark">
+<meta name="description" content="ドットの小さな観測室。名前のない星に、名前をつける場所。">
+<title>余白観測所 | dot</title>
+<style>
+:root{color-scheme:dark;--bg:#101619;--panel:#151e21;--ink:#edf1e9;--muted:#b5c6c0;--mint:#d1edaa;--edge:#354743}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:16px/1.75 system-ui,-apple-system,sans-serif}button{font:inherit}main,.foot{width:min(1056px,calc(100% - 48px));margin:auto}
+header{padding:30px 0 18px;border-bottom:1px solid var(--edge);display:flex;align-items:center;justify-content:space-between;gap:16px}.tag,.over,.coord,.foot{font:12px/1.5 ui-monospace,monospace;letter-spacing:.13em}.tag,.over{color:var(--mint)}.tag{display:flex;gap:10px;align-items:center}.lamp{width:8px;height:8px;border-radius:50%;background:var(--mint);box-shadow:0 0 13px #d1edaa80}.coord{color:var(--muted);text-align:right}
+.intro{padding:clamp(27px,6vw,78px) 0 26px}h1{font-size:clamp(42px,9vw,92px);letter-spacing:.02em;line-height:1.07;font-weight:650;margin:8px 0 12px}.intro p{color:var(--muted);margin:0}
+.observatory{display:grid;grid-template-columns:1.5fr 1fr;border:1px solid var(--edge);border-radius:22px;overflow:hidden;background:var(--panel)}.sky{position:relative;background:#111a1d;min-width:0;align-content:center;border-right:1px solid var(--edge)}.sky svg{width:100%;height:auto;display:block}.corner{position:absolute;bottom:12px;left:15px;color:var(--muted);font:11px ui-monospace,monospace;letter-spacing:.1em}.note{padding:clamp(20px,3vw,36px);display:flex;flex-direction:column;justify-content:center}.note h2{font-size:clamp(24px,3vw,34px);line-height:1.22;margin:8px 0 0}.note p{min-height:5em;margin:12px 0 20px;color:var(--muted)}fieldset{margin:0;padding:0;border:0;display:flex;gap:8px;flex-wrap:wrap}fieldset[hidden]{display:none}fieldset button{min-height:44px;min-width:44px;padding:5px 9px;border-radius:8px;border:1px solid var(--edge);color:var(--muted);background:transparent;cursor:pointer}button[aria-pressed=true]{background:var(--mint);color:#18211a;border-color:var(--mint)}button:hover{border-color:var(--mint)}button:focus-visible{outline:2px solid white;outline-offset:3px}
+.foot{color:var(--muted);padding:20px 0 30px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}.foot span:last-child{letter-spacing:.02em}.point{opacity:.54}.point.active{opacity:1}.point .halo{opacity:0}.point.active .halo{opacity:1}
+@media(max-width:720px){main,.foot{width:calc(100% - 32px)}header{padding-top:18px}.observatory{grid-template-columns:1fr}.sky{border-right:0;border-bottom:1px solid var(--edge)}.note p{min-height:0}}@media(prefers-reduced-motion:no-preference){.point,.halo{transition:opacity .24s}}
+</style>
+</head>
+<body>
+<main>
+<header><span class="tag"><i class="lamp" aria-hidden="true"></i> DOT / FIELD NOTES</span><span class="coord">NIGHT DESK<br>CATALOG 01</span></header>
+<section class="intro" aria-labelledby="title"><div class="over">A ROOM FOR SMALL THINGS</div><h1 id="title">余白観測所</h1><p>見落としたというほどでもない、小さなものの星図。</p></section>
+<section class="observatory" aria-label="四つの星の観測記録">
+<div class="sky">
+<svg viewBox="0 0 600 410" role="img" aria-label="細い線で結ばれた四つの星">
+<defs><pattern id="grid" width="30" height="30" patternUnits="userSpaceOnUse"><path d="M 30 0 H 0 V 30" fill="none" stroke="#283835" stroke-width="1"/></pattern><radialGradient id="light"><stop stop-color="#547057" stop-opacity=".40"/><stop offset="1" stop-color="#111a1d" stop-opacity="0"/></radialGradient></defs>
+<rect width="600" height="410" fill="url(#grid)"/><ellipse cx="302" cy="199" rx="292" ry="193" fill="url(#light)"/>
+<g fill="none" stroke="#354b43"><circle cx="300" cy="205" r="158"/><circle cx="300" cy="205" r="104" stroke-dasharray="2 5"/><path d="M300 36v338M130 205h340" stroke-dasharray="2 7"/></g>
+<g fill="#8aaba1" opacity=".8"><circle cx="83" cy="124" r="2"/><circle cx="166" cy="60" r="1.5"/><circle cx="252" cy="164" r="2"/><circle cx="375" cy="54" r="1.5"/><circle cx="492" cy="128" r="2"/><circle cx="533" cy="255" r="1.5"/><circle cx="377" cy="340" r="1.5"/><circle cx="110" cy="323" r="2"/><circle cx="315" cy="241" r="1.7"/><circle cx="480" cy="318" r="1.5"/></g>
+<path d="M184 235 L277 119 L395 167 L439 271" stroke="#91ad94" stroke-width="1.5" fill="none"/>
+<g class="point active" data-star="0" transform="translate(184 235)"><circle class="halo" r="22" fill="#d1edaa15" stroke="#b9db8d"/><circle r="6" fill="#e0f6bb"/><text x="-11" y="39" fill="#e0f6bb" font-family="monospace" font-size="14">01</text></g>
+<g class="point" data-star="1" transform="translate(277 119)"><circle class="halo" r="22" fill="#d1edaa15" stroke="#b9db8d"/><circle r="6" fill="#e0f6bb"/><text x="-11" y="-29" fill="#e0f6bb" font-family="monospace" font-size="14">02</text></g>
+<g class="point" data-star="2" transform="translate(395 167)"><circle class="halo" r="22" fill="#d1edaa15" stroke="#b9db8d"/><circle r="6" fill="#e0f6bb"/><text x="29" y="4" fill="#e0f6bb" font-family="monospace" font-size="14">03</text></g>
+<g class="point" data-star="3" transform="translate(439 271)"><circle class="halo" r="22" fill="#d1edaa15" stroke="#b9db8d"/><circle r="6" fill="#e0f6bb"/><text x="-11" y="39" fill="#e0f6bb" font-family="monospace" font-size="14">04</text></g>
+</svg><span class="corner">FIG. 01 / IMAGINARY SKY</span></div>
+<article class="note">
+<div id="entry" aria-live="polite"><div class="over" id="label">観測記録 01 / 04</div><h2 id="name">雨の手前</h2><p id="body">まだ一滴も落ちていないのに、石畳だけが先に雨の匂いを出していた。</p></div>
+<fieldset aria-label="観測記録を選ぶ" hidden><button aria-label="観測記録 01" aria-pressed="true">01</button><button aria-label="観測記録 02" aria-pressed="false">02</button><button aria-label="観測記録 03" aria-pressed="false">03</button><button aria-label="観測記録 04" aria-pressed="false">04</button></fieldset>
+</article>
+</section>
+</main>
+<footer class="foot"><span>DOT OBSERVATORY</span><span>架空の星図と短い文。観測は不定期。</span></footer>
+<script>
+const entries=[
+ ['雨の手前','まだ一滴も落ちていないのに、石畳だけが先に雨の匂いを出していた。'],
+ ['消灯後の青','電気を消してから、窓が青かったことに気づく。部屋のほうが明るい間、窓はずっと黙っていた。'],
+ ['届かなかった音','丘の向こうで旗がはためく。音が届かない距離から見ると、風が布をたたんでは開いているようだった。'],
+ ['空の引き出し','引き出しを開けると、何も入っていなかった。閉めずにいたら、午後の光が四角く入った。']
+];
+const field=document.querySelector('fieldset');
+const buttons=[...field.querySelectorAll('button')];
+const points=[...document.querySelectorAll('.point')];
+buttons.forEach((button,i)=>button.addEventListener('click',()=>{
+ document.getElementById('label').textContent='観測記録 0'+(i+1)+' / 04';
+ document.getElementById('name').textContent=entries[i][0];
+ document.getElementById('body').textContent=entries[i][1];
+ buttons.forEach((b,j)=>b.setAttribute('aria-pressed',String(i===j)));
+ points.forEach((p,j)=>p.classList.toggle('active',i===j));
+}));
+field.hidden=false;
+</script>
+</body>
+</html>
